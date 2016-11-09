@@ -1,0 +1,22 @@
+[Unit]
+Description=Gate One
+After=apache2.service
+
+[Service]
+Type=simple
+User=nastools-gateone
+Group=nastools-gateone
+RuntimeDirectory=nastools-gateone
+ExecStart=/apps/nastools-gateone/gateone/bin/gateone \
+          --log_file_prefix=/apps/nastools-gateone/logs/gateone.log \
+          --cache_dir=/apps/nastools-gateone/var/cache \
+          --session_dir=/run/nastools-gateone/sessions \
+          --settings_dir=/apps/nastools-gateone/etc \
+          --pid_file=/run/nastools-gateone/pid \
+          --user_dir=/apps/nastools-gateone/var/users \
+          --address=127.0.0.1 --port=9080 --disable_ssl=True \
+          --origins=* --url_prefix=/apps/nastools-gateone/
+
+
+[Install]
+WantedBy=multi-user.target

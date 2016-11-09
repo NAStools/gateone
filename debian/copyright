@@ -1,0 +1,38 @@
+Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: gateone
+Source: https://github.com/liftoff/gateone
+
+Files: *
+Copyright: 2013 Liftoff Software Corporation
+License: AGPLv3
+ Gate One is dual-licensed:  AGPLv3 or Commercial Licensing.
+ .
+ Unless you have been granted a license from Liftoff Software, Gate One and all
+ bundled software--except where noted--is licensed under the GNU Affero General
+ Public License version 3.  A copy of the AGPLv3 license should have been
+ included with the Gate One software as AGPLv3.txt.  If not, a copy may be
+ obtained by visiting:
+ .
+     http://www.gnu.org/licenses/agpl.html
+ .
+ If the terms of the AGPLv3 license do not suit your needs, a proprietary
+ license may be purchased from Liftoff Software:  http://liftoffsoftware.com/
+
+Files: debian/*
+Copyright: 2016 NAStools <dev@nas.tools>
+License: GPL-2+
+ This package is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation; either version 2 of the License, or
+ (at your option) any later version.
+ .
+ This package is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+ .
+ You should have received a copy of the GNU General Public License
+ along with this program. If not, see <http://www.gnu.org/licenses/>
+ .
+ On Debian systems, the complete text of the GNU General
+ Public License version 2 can be found in "/usr/share/common-licenses/GPL-2".

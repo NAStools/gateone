@@ -1,0 +1,11 @@
+#!/usr/bin/make -f
+export DH_VERBOSE=1
+export DH_VIRTUALENV_INSTALL_ROOT=/apps/nastools-gateone
+export DH_UPGRADE_SETUPTOOLS
+
+%:
+	dh $@ --with python3 --with python-virtualenv --buildsystem=pybuild
+
+override_dh_virtualenv:
+	dh_virtualenv --python /usr/bin/python3 --install-suffix=gateone \
+		      --requirements requirements_all.txt

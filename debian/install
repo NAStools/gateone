@@ -1,0 +1,4 @@
+debian/readynas/logo.png apps/nastools-gateone
+debian/readynas/config.xml apps/nastools-gateone
+debian/readynas/https.conf apps/nastools-gateone
+debian/readynas/fvapp-nastools-gateone.service apps/nastools-gateone

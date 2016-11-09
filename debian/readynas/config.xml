@@ -1,0 +1,13 @@
+<Application resource-id="nastools-gateone">
+  <Version></Version>
+  <MinFirmwareVer>6.6.0</MinFirmwareVer>
+  <Name>Gate One NT</Name>
+  <Author>NAStools</Author>
+  <RequireReboot>0</RequireReboot>
+  <LaunchURL>https://localhost/apps/nastools-gateone</LaunchURL>
+  <InfoURL>https://github.com/nastools/gateone</InfoURL>
+  <DebianPackage>nastools-gateone</DebianPackage>
+  <ServiceName>fvapp-nastools-gateone.service</ServiceName>
+  <Description lang="en-us">HTML5 web-based terminal emulator and SSH client</Description>
+  <ConfigURL/>
+</Application>

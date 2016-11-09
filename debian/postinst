@@ -1,0 +1,34 @@
+#!/bin/sh
+set -e
+
+case "$1" in
+    configure)
+    if ! getent group nastools-gateone >/dev/null 2>&1; then
+        rn_nml -a group:nastools-gateone
+    fi
+    if ! getent passwd nastools-gateone >/dev/null 2>&1; then
+        rn_nml -a user:nastools-gateone:nastools-gateone
+    fi
+    chown -R nastools-gateone:nastools-gateone /apps/nastools-gateone
+    # Make sure Gate One is configured before start, otherwise origins isn't
+    # set correctly on first start.
+    su -s /bin/bash -c '/apps/nastools-gateone/gateone/bin/gateone \
+         --log_file_prefix=/apps/nastools-gateone/logs/gateone.log \
+                      --cache_dir=/apps/nastools-gateone/var/cache \
+                         --settings_dir=/apps/nastools-gateone/etc \
+                       --user_dir=/apps/nastools-gateone/var/users \
+                --address=127.0.0.1 --disable_ssl=True --origins=* \
+                 --url_prefix=/apps/nastools-gateone/ --configure' \
+                                                  nastools-gateone
+    # Remove sessions folder from previous configure
+    rm -rf /home/nastools-gateone/.gateone || true
+    ;;
+    *)
+        echo "postinst called with unknown argument \`$1'" >&2
+        exit 1
+    ;;
+esac
+
+#DEBHELPER#
+
+exit 0
