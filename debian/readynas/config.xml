@@ -1,5 +1,5 @@
 <Application resource-id="nastools-gateone">
-  <Version></Version>
+  <Version>1.2.0~1466273177-nt1</Version>
   <MinFirmwareVer>6.6.0</MinFirmwareVer>
   <Name>Gate One NT</Name>
   <Author>NAStools</Author>
